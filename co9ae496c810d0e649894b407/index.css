@@ -1,0 +1,284 @@
+body {
+    margin: 0;
+    font-family: 'Smythe', sans-serif; 
+    color: #000000;
+}
+
+/* Menu Styles */
+.main-menu {
+    border-bottom: 1px solid lightgray;
+    padding: 20px 0;
+    width: 100%;
+    margin: 15px;
+}
+
+.menu-item-inner {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.item-emoji {
+    width: 70px;
+    height: 89px;
+    font-size: 79px;
+    margin-right: 65px;
+}
+
+.item-name {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.item-ingredients {
+    width: 358px;
+    height: 24px;
+    top: 267px;
+    left: 147px;
+    color: #8B8B8B;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 0;
+}
+
+.item-price {
+    width: 19px;
+    height: 24px;
+    top: 299px;
+    left: 147px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 0;
+    margin-left: auto;
+}
+
+.add-item-btn {
+    top: 5px;
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 24px;
+    letter-spacing: 0em;
+    background: #FFFFFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 1.5px solid #DEDEDE;
+    margin-left: 390px;
+    position: absolute;
+}
+
+/* Your Order Container Styles */
+.your-order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.your-order-heading {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.your-order-container-inner {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+}
+
+.name-of-item {
+    font-size: 28px;
+    font-weight: 700; /* Make the item name bold */
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.remove-item-btn {
+    font-size: 12px;
+    font-weight: 700;
+    color: #BBBBBB; /* Match the color to the 'ingredients' list in the main menu */
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.total-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    border-top: 1px solid #000000;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.total-label,
+.total-amount {
+    font-size: 24px; /* Adjust the font size */
+    font-weight: 700; /* Make it bolder */
+    text-align: center; /* Align to the center */
+    margin-bottom: 10px; /* Add margin for spacing between label and amount */
+}
+
+/* Complete Order Button Styles */
+.complete-order-btn {
+    background: #16DB99;
+    color: #FFFFFF;
+    border: none;
+    width: 508px;
+    height: 60px;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+/* Payment Modal Styles */
+.payment-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+.payment-modal label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.payment-modal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.payment-modal-btn {
+    background: #16DB99;
+    color: #FFFFFF;
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%; /* You can adjust the percentage based on your preference */
+  max-width: 600px; /* Set a maximum width to maintain readability */
+  height: auto; /* Let the height adjust based on content */
+  padding: 40px;
+    
+}
+
+.modal-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Add styling for the input fields */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: 700; /* Make label text bold */
+}
+
+input {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Add styling for the 'Pay Now' button */
+.pay-now-btn {
+  background-color: #16DB99;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Add styles for the loading modal */
+.loading-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+/* Add styling for the modal content */
+.loading-modal .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+.loading-modal,
+.thank-you-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+.loading-modal h2,
+.thank-you-modal h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.loading-modal p,
+.thank-you-modal p {
+    font-size: 16px;
+    text-align: center;
+}

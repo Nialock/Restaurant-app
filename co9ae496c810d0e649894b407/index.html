@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&family=Source+Sans+3&display=swap" rel="stylesheet">
+    <!-- Setting the viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="header-img">
+            <img src="images/header.png" alt="Header Image"/>
+        </div>
+    </header>
+    
+    <main>
+        <div class="menu" id="menu">
+            <!-- Your existing menu container code goes here -->
+        </div>
+
+        <section id="dynamic">
+            <div class="your-order-section">
+                <div class="your-order-container" id="your-order-container">
+                    <p class="your-order-heading">Your Order</p>
+        
+                    <!-- Your Order items will be rendered here dynamically -->
+                </div>
+                <div class="total-section">
+                    <div class="total-border"></div>
+                    <div class="total-label">Total Price</div>
+                    <div class="total-amount" id="total-amount">$0.00</div>
+                    <button class="complete-order-btn" id="complete-order-btn">Complete order</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Container -->
+        <div class="modal-container" id="modal-container">
+            <div class="payment-modal" id="payment-modal">
+                <div class="modal-content">
+                    <h2>Enter Card Details</h2>
+                    <form id="payment-form">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter Name on Card" aria-label="Enter Name on Card" required>
+                        
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter Card Number" aria-label="Enter Card Number" required pattern="[0-9]{16}">
+                        
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" aria-label="MM/YY" required pattern="(0[1-9]|1[0-2])\/\d{2}">
+                        
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="CVV" aria-label="CVV" required pattern="[0-9]{3}">
+                    </form>
+                    
+                    <button id="pay-now-btn" class="pay-now-btn">Pay Now</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Loading Modal -->
+        <div class="modal-container" id="modal-container">
+            <div class="loading-modal" id="loading-modal">
+                <div class="modal-content">
+                    <h2>Loading...</h2>
+                    <p>Connecting to your bank. Please wait a moment.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thank You Modal -->
+        <div class="modal-container" id="modal-container">
+            <div class="thank-you-modal" id="thank-you-modal">
+                <div class="modal-content">
+                    <h2>Thank You!</h2>
+                    <p id="thank-you-message">Your order will be on its way soon!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
